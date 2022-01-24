@@ -11,18 +11,23 @@ jobs:
     - uses: actions/checkout@v2
     - name: Login to GHCR
       run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u dojo-service-account --password-stdin
+    - name: Build the base worker image
+      run: docker build . --file Dockerfile --tag ghcr.io/dojocodes/sandbox-worker-base:${{ github.event.release.tag_name }} ghcr.io/dojocodes/sandbox-worker-base:latest
+    - name: Push the base image
+      run: docker push ghcr.io/dojocodes/sandbox-worker-base:${{ github.event.release.tag_name }} ghcr.io/dojocodes/sandbox-worker-base:latest;
     - name: Build and push all the Docker images
       run: |
+        echo "Show env";
+        pwd;
+        ls;
         for worker_image_path in worker_images/*; do
           echo "Worker path: $worker_image_path";
           worker_image_name=$(basename $worker_image_path);
           echo "Worker name: $worker_image_name";
           docker_image_name="sandbox-worker-$worker_image_name";
           echo "Docker image name: $docker_image_name";
-          docker build "$worker_image_path" --file Dockerfile --tag "ghcr.io/dojocodes/$docker_image_name:${{ github.event.release.tag_name }}";
+          docker build "$worker_image_path" --tag "ghcr.io/dojocodes/$docker_image_name:${{ github.event.release.tag_name }}";
           echo "Build OK for $docker_image_name";
           docker push ghcr.io/dojocodes/$docker_image_name:${{ github.event.release.tag_name }};
           echo "Push OK for $docker_image_name";
         done
-    - name: Upload to GHCR
-      run: docker push ghcr.io/dojocodes/backend:${{ github.event.release.tag_name }}

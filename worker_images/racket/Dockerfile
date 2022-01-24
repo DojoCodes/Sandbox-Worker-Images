@@ -1,4 +1,4 @@
-FROM sandcodex_worker_base:latest
+FROM ghcr.io/dojocodes/sandbox-worker-base:latest
 
 # RACKET INSTALLATION
 RUN echo "**** install Racket ****" && \
