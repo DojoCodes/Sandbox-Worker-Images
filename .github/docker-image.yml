@@ -1,0 +1,23 @@
+name: Docker Image CI
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to GHCR
+      run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u dojo-service-account --password-stdin
+    - name: Build and push all the Docker images
+      run: |
+        for worker_image_path in worker_images/*; do 
+          worker_image_name=$(basename $worker_image_path);
+          docker_image_name="sandbox-worker-$worker_image_name";
+          docker build "$worker_image_path" --file Dockerfile --tag "ghcr.io/dojocodes/$docker_image_name:${{ github.event.release.tag_name }}";
+          docker push ghcr.io/dojocodes/$docker_image_name:${{ github.event.release.tag_name }}
+        done
+    - name: Upload to GHCR
+      run: docker push ghcr.io/dojocodes/backend:${{ github.event.release.tag_name }}
