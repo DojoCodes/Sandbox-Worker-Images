@@ -1,4 +1,4 @@
-FROM sandcodex_worker_base:latest
+FROM ghcr.io/dojocodes/sandbox-worker-base:latest
 
 # BASH INSTALLATION
 RUN echo "**** install Java ****" && \
