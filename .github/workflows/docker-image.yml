@@ -12,9 +12,9 @@ jobs:
     - name: Login to GHCR
       run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u dojo-service-account --password-stdin
     - name: Build the base worker image
-      run: docker build . --file Dockerfile --tag ghcr.io/dojocodes/sandbox-worker-base:${{ github.event.release.tag_name }} ghcr.io/dojocodes/sandbox-worker-base:latest
+      run: docker build . --file Dockerfile --tag ghcr.io/dojocodes/sandbox-worker-base:${{ github.event.release.tag_name }} --tag ghcr.io/dojocodes/sandbox-worker-base:latest
     - name: Push the base image
-      run: docker push ghcr.io/dojocodes/sandbox-worker-base:${{ github.event.release.tag_name }} ghcr.io/dojocodes/sandbox-worker-base:latest;
+      run: docker push ghcr.io/dojocodes/sandbox-worker-base --all-tags
     - name: Build and push all the Docker images
       run: |
         echo "Show env";
