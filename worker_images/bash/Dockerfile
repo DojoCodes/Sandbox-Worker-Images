@@ -1,5 +1,7 @@
 FROM ghcr.io/dojocodes/sandbox-worker-base:latest
 
+LABEL environment-name="Bash"
+
 # BASH INSTALLATION
 RUN echo "**** install Bash ****" && \
     apk add --no-cache bash && \

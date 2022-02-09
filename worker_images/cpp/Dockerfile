@@ -1,5 +1,7 @@
 FROM ghcr.io/dojocodes/sandbox-worker-base:latest
 
+LABEL environment-name="C++"
+
 # BASH INSTALLATION
 RUN echo "**** install GCC ****" && \
     apk add --no-cache build-base g++ && \

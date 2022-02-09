@@ -1,5 +1,7 @@
 FROM ghcr.io/dojocodes/sandbox-worker-base:latest
 
+LABEL environment-name="C#"
+
 # BASH INSTALLATION
 RUN echo "**** install Mono ****" && \
     apk add --no-cache mono --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing && \

@@ -1,5 +1,7 @@
 FROM ghcr.io/dojocodes/sandbox-worker-base:latest
 
+LABEL environment-name="Rust"
+
 # LLVM INSTALLATION
 RUN echo "**** install LLVM ****" && \
     apk add --no-cache llvm11-libs --repository http://dl-cdn.alpinelinux.org/alpine/edge/main
