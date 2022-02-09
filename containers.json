@@ -1,0 +1,40 @@
+{
+  "containers": {
+    "python": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.1",
+      "name": "Python"
+    },
+    "bash": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.1.1",
+      "name": "Bash"
+    },
+    "c": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-c:1.1.1",
+      "name": "C"
+    },
+    "cpp": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-cpp:1.1.1",
+      "name": "C++"
+    },
+    "csharp": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-csharp:1.1.1",
+      "name": "C#"
+    },
+    "go": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-go:1.1.1",
+      "name": "Go"
+    },
+    "racket": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-racket:1.1.1",
+      "name": "Racket"
+    },
+    "java": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-java:1.1.1",
+      "name": "Java 11"
+    },
+    "rust": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-rust:1.1.1",
+      "name": "Rust"
+    }
+  }
+}
