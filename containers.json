@@ -3,7 +3,7 @@
     "python": {
       "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.1",
       "name": "Python",
-      "command": "python code.py",
+      "command": "python3 code.py",
       "files": {
         "code.py": {
           "editable": true
