@@ -2,7 +2,14 @@
   "containers": {
     "python": {
       "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.1",
-      "name": "Python"
+      "name": "Python",
+      "command": "python code.py",
+      "files": {
+        "code.py": {
+          "data": "",
+          "editable": true
+        }
+      }
     },
     "bash": {
       "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.1.1",
