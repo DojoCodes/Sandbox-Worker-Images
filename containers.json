@@ -6,7 +6,6 @@
       "command": "python code.py",
       "files": {
         "code.py": {
-          "data": "",
           "editable": true
         }
       }
