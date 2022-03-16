@@ -12,7 +12,13 @@
     },
     "bash": {
       "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.1.1",
-      "name": "Bash"
+      "name": "Bash",
+      "command": "bash code.sh",
+      "files": {
+        "code.sh": {
+          "editable": true
+        }
+      }
     },
     "c": {
       "image": "ghcr.io/dojocodes/sandbox-worker-c:1.1.1",
