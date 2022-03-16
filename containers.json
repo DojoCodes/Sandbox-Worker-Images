@@ -4,6 +4,7 @@
       "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.1",
       "name": "Python",
       "command": "python3 code.py",
+      "description": "Python is a programming language that lets you work quickly and integrate systems more effectively.",
       "files": {
         "code.py": {
           "editable": true
@@ -14,6 +15,7 @@
       "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.1.1",
       "name": "Bash",
       "command": "bash code.sh",
+      "description": "Bash (acronym for Bourne-Again shell) is a command line interpreter. It is the Unix shell of the GNU project.",
       "files": {
         "code.sh": {
           "editable": true
