@@ -1,7 +1,7 @@
 {
   "containers": {
     "python": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.2",
       "name": "Python",
       "command": "python3 code.py",
       "description": "Python is a programming language that lets you work quickly and integrate systems more effectively.",
@@ -12,7 +12,7 @@
       }
     },
     "bash": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.1.2",
       "name": "Bash",
       "command": "bash code.sh",
       "description": "Bash (acronym for Bourne-Again shell) is a command line interpreter. It is the Unix shell of the GNU project.",
@@ -23,31 +23,31 @@
       }
     },
     "c": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-c:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-c:1.1.2",
       "name": "C"
     },
     "cpp": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-cpp:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-cpp:1.1.2",
       "name": "C++"
     },
     "csharp": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-csharp:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-csharp:1.1.2",
       "name": "C#"
     },
     "go": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-go:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-go:1.1.2",
       "name": "Go"
     },
     "racket": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-racket:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-racket:1.1.2",
       "name": "Racket"
     },
     "java": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-java:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-java:1.1.2",
       "name": "Java 11"
     },
     "rust": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-rust:1.1.1",
+      "image": "ghcr.io/dojocodes/sandbox-worker-rust:1.1.2",
       "name": "Rust",
       "before_command": "rustc code.rs -o executable",
       "command": "./executable",
