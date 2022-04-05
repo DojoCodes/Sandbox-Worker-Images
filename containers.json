@@ -48,7 +48,15 @@
     },
     "rust": {
       "image": "ghcr.io/dojocodes/sandbox-worker-rust:1.1.1",
-      "name": "Rust"
+      "name": "Rust",
+      "before_command": "rustc code.rs -o executable",
+      "command": "./executable",
+      "description": "Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency",
+      "files": {
+        "code.rs": {
+          "editable": true
+        }
+      }
     }
   }
 }
