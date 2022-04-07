@@ -24,27 +24,72 @@
     },
     "c": {
       "image": "ghcr.io/dojocodes/sandbox-worker-c:1.1.2",
-      "name": "C"
+      "name": "C",
+      "before_command": "gcc -std=c17 code.c -o executable",
+      "command": "./executable",
+      "description": "C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, with a static type system.",
+      "files": {
+        "code.c": {
+          "editable": true
+        }
+      }
     },
     "cpp": {
       "image": "ghcr.io/dojocodes/sandbox-worker-cpp:1.1.2",
-      "name": "C++"
+      "name": "C++",
+      "before_command": "g++ -std=c++17 code.cpp -o executable",
+      "command": "./executable",
+      "description": "C++ is a general-purpose programming language created as an extension of the C programming language, or 'C with Classes'.",
+      "files": {
+        "code.cpp": {
+          "editable": true
+        }
+      }
     },
     "csharp": {
       "image": "ghcr.io/dojocodes/sandbox-worker-csharp:1.1.2",
-      "name": "C#"
+      "name": "C#",
+      "before_command": "csc code.cs",
+      "command": "mono code.exe",
+      "description": "C# is a general-purpose, multi-paradigm programming language, which encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented and component-oriented programming disciplines.",
+      "files": {
+        "code.cs": {
+          "editable": true
+        }
+      }
     },
     "go": {
       "image": "ghcr.io/dojocodes/sandbox-worker-go:1.1.2",
-      "name": "Go"
+      "name": "Go",
+      "command": "go run code.go",
+      "description": "Go is a statically typed, compiled programming language, which is syntactically similar to C, but with memory safety, garbage collection, structural typing and CSP-style concurrency.",
+      "files": {
+        "code.go": {
+          "editable": true
+        }
+      }
     },
     "racket": {
       "image": "ghcr.io/dojocodes/sandbox-worker-racket:1.1.2",
-      "name": "Racket"
+      "name": "Racket",
+      "command": "racket code.rkt",
+      "description": "Racket is a general-purpose, multi-paradigm programming language and a multi-platform distribution that includes the Racket language, compiler, large standard library, IDE, development tools, and a set of additional languages.",
+      "files": {
+        "code.rkt": {
+          "editable": true
+        }
+      }
     },
     "java": {
       "image": "ghcr.io/dojocodes/sandbox-worker-java:1.1.2",
-      "name": "Java 11"
+      "name": "Java 11",
+      "command": "java code.java",
+      "description": "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
+      "files": {
+        "code.java": {
+          "editable": true
+        }
+      }
     },
     "rust": {
       "image": "ghcr.io/dojocodes/sandbox-worker-rust:1.1.2",
