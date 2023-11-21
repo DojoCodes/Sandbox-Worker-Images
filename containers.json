@@ -1,16 +1,5 @@
 {
   "containers": {
-    "python": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.2",
-      "name": "Python",
-      "command": "python3 code.py",
-      "description": "Python is a programming language that lets you work quickly and integrate systems more effectively.",
-      "files": {
-        "code.py": {
-          "editable": true
-        }
-      }
-    },
     "bash": {
       "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.1.2",
       "name": "Bash",
@@ -69,17 +58,6 @@
         }
       }
     },
-    "racket": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-racket:1.1.2",
-      "name": "Racket",
-      "command": "racket code.rkt",
-      "description": "Racket is a general-purpose, multi-paradigm programming language and a multi-platform distribution that includes the Racket language, compiler, large standard library, IDE, development tools, and a set of additional languages.",
-      "files": {
-        "code.rkt": {
-          "editable": true
-        }
-      }
-    },
     "java": {
       "image": "ghcr.io/dojocodes/sandbox-worker-java:1.1.2",
       "name": "Java 11",
@@ -87,6 +65,39 @@
       "description": "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
       "files": {
         "code.java": {
+          "editable": true
+        }
+      }
+    },
+    "nodejs": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-nodejs:1.1.2",
+      "name": "NodeJS",
+      "command": "node code.js",
+      "description": "Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.",
+      "files": {
+        "code.js": {
+          "editable": true
+        }
+      }
+    },
+    "python": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.2",
+      "name": "Python",
+      "command": "python3 code.py",
+      "description": "Python is a programming language that lets you work quickly and integrate systems more effectively.",
+      "files": {
+        "code.py": {
+          "editable": true
+        }
+      }
+    },
+    "racket": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-racket:1.1.2",
+      "name": "Racket",
+      "command": "racket code.rkt",
+      "description": "Racket is a general-purpose, multi-paradigm programming language and a multi-platform distribution that includes the Racket language, compiler, large standard library, IDE, development tools, and a set of additional languages.",
+      "files": {
+        "code.rkt": {
           "editable": true
         }
       }
