@@ -102,6 +102,17 @@
           "editable": true
         }
       }
-    }
+    },
+    "perl": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-perl:1.1.2",
+      "name": "Perl",
+      "command": "perl code.pl",
+      "description": "Perl is a highly capable, feature-rich programming language with over 30 years of development.",
+      "files": {
+        "code.pl": {
+          "editable": true
+        }
+      }
+    },
   }
 }
