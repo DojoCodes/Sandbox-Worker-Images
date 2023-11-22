@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.18
 
 LABEL org.opencontainers.image.source=https://github.com/DojoCodes/Sandbox-Worker-Images
 
