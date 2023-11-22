@@ -1,7 +1,7 @@
 {
   "containers": {
     "bash": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-bash:1.2.0",
       "name": "Bash",
       "command": "bash code.sh",
       "description": "Bash (acronym for Bourne-Again shell) is a command line interpreter. It is the Unix shell of the GNU project.",
@@ -12,7 +12,7 @@
       }
     },
     "c": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-c:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-c:1.2.0",
       "name": "C",
       "before_command": "gcc -std=c17 code.c -o executable",
       "command": "./executable",
@@ -24,7 +24,7 @@
       }
     },
     "cpp": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-cpp:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-cpp:1.2.0",
       "name": "C++",
       "before_command": "g++ -std=c++20 code.cpp -o executable",
       "command": "./executable",
@@ -36,7 +36,7 @@
       }
     },
     "csharp": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-csharp:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-csharp:1.2.0",
       "name": "C#",
       "before_command": "csc code.cs",
       "command": "mono code.exe",
@@ -48,7 +48,7 @@
       }
     },
     "go": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-go:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-go:1.2.0",
       "name": "Go",
       "command": "go run code.go",
       "description": "Go is a statically typed, compiled programming language, which is syntactically similar to C, but with memory safety, garbage collection, structural typing and CSP-style concurrency.",
@@ -59,7 +59,7 @@
       }
     },
     "java": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-java:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-java:1.2.0",
       "name": "Java 11",
       "command": "java code.java",
       "description": "Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.",
@@ -70,7 +70,7 @@
       }
     },
     "nodejs": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-nodejs:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-nodejs:1.2.0",
       "name": "NodeJS",
       "command": "node code.js",
       "description": "Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.",
@@ -80,8 +80,19 @@
         }
       }
     },
+    "nushell": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-nushell:1.2.0",
+      "name": "Nushell",
+      "command": "nu code.nu",
+      "description": "nushell is a new type of shell. It has native support for structured and typed data.",
+      "files": {
+        "code.nu": {
+          "editable": true
+        }
+      }
+    },
     "python": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-python:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-python:1.2.0",
       "name": "Python",
       "command": "python3 code.py",
       "description": "Python is a programming language that lets you work quickly and integrate systems more effectively.",
@@ -92,7 +103,7 @@
       }
     },
     "racket": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-racket:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-racket:1.2.0",
       "name": "Racket",
       "command": "racket code.rkt",
       "description": "Racket is a general-purpose, multi-paradigm programming language and a multi-platform distribution that includes the Racket language, compiler, large standard library, IDE, development tools, and a set of additional languages.",
@@ -103,7 +114,7 @@
       }
     },
     "rust": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-rust:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-rust:1.2.0",
       "name": "Rust",
       "before_command": "rustc code.rs -o executable",
       "command": "./executable",
@@ -115,7 +126,7 @@
       }
     },
     "perl": {
-      "image": "ghcr.io/dojocodes/sandbox-worker-perl:1.1.2",
+      "image": "ghcr.io/dojocodes/sandbox-worker-perl:1.2.0",
       "name": "Perl",
       "command": "perl code.pl",
       "description": "Perl is a highly capable, feature-rich programming language with over 30 years of development.",
