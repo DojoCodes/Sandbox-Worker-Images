@@ -69,6 +69,17 @@
         }
       }
     },
+    "lua": {
+      "image": "ghcr.io/dojocodes/sandbox-worker-lua:1.2.0",
+      "name": "Lua 5.4",
+      "command": "lua5.4 code.lua",
+      "description": "Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications.",
+      "files": {
+        "code.lua": {
+          "editable": true
+        }
+      }
+    },
     "nodejs": {
       "image": "ghcr.io/dojocodes/sandbox-worker-nodejs:1.2.0",
       "name": "NodeJS",
